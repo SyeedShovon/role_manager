@@ -32,5 +32,10 @@
                 {{ $slot }}
             </main>
         </div>
-    </body>
+  
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    @isset($script)
+    {{ $script }}
+    @endisset
+</body>
 </html>
