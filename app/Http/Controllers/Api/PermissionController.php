@@ -13,10 +13,6 @@ class PermissionController extends Controller
         return Permission::orderByDesc('id')->get();
     }
 
-    // public function create(){
-        // return view('permissions.create');
-    // }
-
     public function store(Request $req){
         $validator = Validator::make($req->all(),[
             'name' => 'required|unique:permissions|min:3'
@@ -28,10 +24,6 @@ class PermissionController extends Controller
             return $validator->errors();
         }
     }
-
-    // public function edit(){
-
-    // }
 
     public function update(Request $req){
         if(!$req->id || $req->id==''){
